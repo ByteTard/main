@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://support.blockchain.com/attachments/token/pPI0ZYhSqyFjOodrsEE1tXu4Q/?name=explorer_xz3802aIgk.png" type="image/png">
+     <script>
+        let titleText = "<--- ByteTard Resales --->";
+        let position = 0;
+        function scrollTitle() {
+            document.title = titleText.substring(position) + titleText.substring(0, position);
+            position = (position + 1) % titleText.length;
+            setTimeout(scrollTitle, 200);
+        }
+        scrollTitle();
+    </script>
+	<script>
+        function searchRedirect(event) {
+            if (event.key === 'Enter') {
+                let query = document.getElementById('search-bar').value;
+                if (query) {
+                    window.location.href = "https://www.mercari.com/u/scaring/?keyword=" + encodeURIComponent(query);
+                }
+            }
+        }
+    </script> 
+	<style>
+        body {
+            font-size: 1.2em;
+            font-family: 'Creepster', cursive;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(135deg, #000, #222, #555);
+            color: #f00;
+        }
+        header {
+            font-size: 2.5em;
+            letter-spacing: 3px;
+            font-family: 'Nosifer', cursive;
+            background: linear-gradient(135deg, #000, #222, #555);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 0 15px #f00;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            background: #111;
+            padding: 10px;
+            box-shadow: 0 0 10px #f00;
+            position: fixed;
+            width: 100%;
+            top: 80px;
+            z-index: 999;
+            transition: all 0.5s ease-in-out;
+        }
+        .navbar-toggler {
+            border: none;
+            background: none;
+            color: white;
+            font-size: 2em;
+            transition: transform 0.3s ease-in-out;
+        }
+        .navbar-toggler:hover {
+            transform: rotate(90deg);
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-links a:hover {
+            color: #f00;
+            transform: scale(1.1);
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?technology,futuristic') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+            box-shadow: 0 0 15px #f00;
+            animation: fadeIn 2s ease-in-out;
+            margin-top: 120px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hero h1 {
+            font-size: 4em;
+            text-shadow: 2px 2px 20px black;
+        }
+        .hero p {
+            font-size: 1.8em;
+            margin: 20px 0;
+        }
+        .btn-hero {
+            background: #f00;
+            color: white;
+            padding: 14px 28px;
+            font-size: 1.5em;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+            position: relative;
+            display: inline-block;
+            animation: fadeColor 2s infinite alternate;
+        }
+        @keyframes fadeColor {
+            0% { background: #f00; }
+            100% { background: #ff69b4; }
+        }
+        .btn-hero:hover {
+            transform: scale(1.1) rotate(3deg);
+        }
+        .navbar-collapse {
+            text-align: center;
+        }
+        footer {
+            background: linear-gradient(90deg, #111, #333);
+            color: white;
+            padding: 20px 0;
+            margin-top: 20px;
+            box-shadow: 0 0 15px #f00;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>ByteTard Resales</h1>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            &#9776;
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="nav-links mx-auto">
+                <a href="/products.html">Products</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/index.html">Home</a>
+            </div>
+        </div>
+		<div class="collapse navbar-collapse" id="navbarNav">
+            <div class="nav-links mx-auto">
+               <input type="text" id="search-bar" placeholder="Search my shop" onkeydown="searchRedirect(event)">
+            </div>
+        </div>
+    </nav>
+    
+<br><br><br><br>
+       
+    <section id="products" class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center bg-dark text-light product">
+                    <img src="https://support.blockchain.com/attachments/token/k5jqeectiiQLVTRPlW1HIidxs/?name=brave_03EPEHqIJS.png" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h3 class="card-title">Pokémon Promo Cards</h3>
+                        <h2 class="card-text">$5.99 - $100.00</h2>
+                        <a href="https://www.mercari.com/u/scaring/?keyword=promo" class="btn-hero">Check Inventory!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center bg-dark text-light product">
+                    <img src="https://support.blockchain.com/attachments/token/zVh4WmdQVF41zAjzmQWeQHdwK/?name=brave_pLL9ry3zIi.png" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h3 class="card-title">Pokémon Holo Cards</h3>
+                        <h2 class="card-text">$5.99 - $100.00</h2>
+                        <a href="https://www.mercari.com/u/scaring/?keyword=holo" class="btn-hero">Check Inventory!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center bg-dark text-light product">
+                    <img src="https://support.blockchain.com/attachments/token/YMzQB5tMXoM9RLmyHkSfo5qL3/?name=brave_tKuanP9Qx2.png" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h3 class="card-title">Python Custom Bots</h3>
+                        <h2 class="card-text">Depending on requests</h2>
+                        <a href="#" class="btn-hero">Coming Soon!</a>
+                    </div>
+                </div>
+            </div>
+			
+		
+			<div class="col-md-4">
+                <div class="card text-center bg-dark text-light product">
+                    <img src="https://support.blockchain.com/attachments/token/sVpqON4ol5pN5pHRXsFDtN4Ey/?name=brave_L1tEyOIvQo.png" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h3 class="card-title">Custom HTML Websites</h3>
+                        <h2 class="card-text">Depending on requests</h2>
+                        <a href="#" class="btn-hero">Coming Soon!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center bg-dark text-light product">
+                    <img src="https://support.blockchain.com/attachments/token/EwnOYVmRbF1ipQs3dJfo5XsCn/?name=brave_gdRW2aazri.png" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h3 class="card-title">Custom Telegram Bots</h3>
+                        <h2 class="card-text">Depending on requests</h2>
+                        <a href="#" class="btn-hero">Coming Soon!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center bg-dark text-light product">
+                    <img src="https://support.blockchain.com/attachments/token/PnNHMni9xf25CL77dZ12DnUHG/?name=brave_0NoXfHlhR9.png" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h3 class="card-title">Custom Adobe Vector</h3>
+                        <h2 class="card-text">Depending on requests</h2>
+                        <a href="#" class="btn-hero">Coming Soon!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ByteTard Resales</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
